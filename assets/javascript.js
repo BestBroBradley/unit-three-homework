@@ -18,10 +18,41 @@ if (pwLength >= 8 && pwLength <= 128) {
     console.log(includeLower);
     console.log(includeUpper);
 
-    var characters = {
-        special: ["!", "@", "#", "$", "%", "&", "*", "+", "="],
-        num: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
-        lower: ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"],
-        upper: ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+    var special = ["!", "@", "#", "$", "%", "&", "*", "+", "="]
+    var num = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    var lower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+    var upper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+    
+    var charArray = [];
+
+    if (includeSpecial) {
+        charArray.push.apply(charArray, special)
     }
+
+    if (includeNum) {
+        charArray.push.apply(charArray, num)
+    }
+
+    if (includeLower) {
+        charArray.push.apply(charArray, lower)
+    }
+
+    if (includeUpper) {
+        charArray.push.apply(charArray, upper)
+    }
+
+    console.log(charArray);
+    
+    pwArray = [];
+    
+    for (var i = 0; i < pwLength; i++){
+        // console.log(charArray[Math.floor(Math.random() * charArray.length)]);
+        var char = charArray[Math.floor(Math.random() * charArray.length)];
+        pwArray.push(char);
+        
+    }
+    var finalPW = pwArray.join("");
+    alert(finalPW);
+
+
 } else alert("You must enter a number between 8 and 128.`")
