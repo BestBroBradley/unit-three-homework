@@ -25,21 +25,16 @@ if (pwLength >= 8 && pwLength <= 128) {
     
     var charArray = [];
 
-    if (includeSpecial) {
-        charArray.push.apply(charArray, special)
+function pushIf (includeType, type) {
+    if (includeType) {
+        charArray.push.apply(charArray, type)
+    }
     }
 
-    if (includeNum) {
-        charArray.push.apply(charArray, num)
-    }
-
-    if (includeLower) {
-        charArray.push.apply(charArray, lower)
-    }
-
-    if (includeUpper) {
-        charArray.push.apply(charArray, upper)
-    }
+    pushIf (includeSpecial, special);
+    pushIf (includeNum, num);
+    pushIf (includeLower, lower);
+    pushIf (includeUpper, upper);
 
     console.log(charArray);
     
