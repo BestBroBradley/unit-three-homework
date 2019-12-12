@@ -1,3 +1,5 @@
+function createPassword() {
+
 var pwLength = prompt("How many characters would you like to use?\n\nEnter a number between 8 and 128.")
 
 if (pwLength >= 8 && pwLength <= 128) {
@@ -47,7 +49,9 @@ function pushIf (includeType, type) {
         
     }
     var finalPW = pwArray.join("");
-    alert(finalPW);
-
+    // alert(finalPW);
+    document.getElementById("password-input").textContent = finalPW
 
 } else alert("You must enter a number between 8 and 128.`")
+
+}
