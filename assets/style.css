@@ -21,14 +21,22 @@ body {
     width: 70%;
 }
 
-p {
+textarea {
+    font-size: 20px;
     margin: 30px auto;
     padding: 10px;
     width: 90%;
 
 }
 
-.password-box {
+#passwordInput {
+    padding-top: 3%;
+    width: 85%;
+    word-wrap: break-word;
+    display: inline-block
+}
+
+.password-box{
     background: white;
     border: 4px coral dotted;
     height: 40%;

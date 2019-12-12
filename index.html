@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Password Generator</title>
     <link rel="stylesheet" type="text/css" href="assets/style.css">
 
 </head>
@@ -20,12 +20,12 @@
         <p>Welcome to the password generator!  Just answer a few questions, and *poof*...just like magic!</p>
 
         <div class="password-box">
-            <p id="password-input"></p>
+            <p input type="text" id="passwordInput"></p>
         </div>
 
         <button type="button" onclick=createPassword() value="Click" id="gen-pw">Generate Password</button>
     
-        <button type="button" id="gen-pw">Copy to Clipboard</button>
+        <!-- <button type="button" onclick=copyToClip() value="Click">Copy to Clipboard</button> -->
 
     </div>
 
