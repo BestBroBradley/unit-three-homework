@@ -57,7 +57,7 @@ function createPassword() {
         console.log(document.getElementById("passwordInput").value)
         var copyText = document.getElementById("passwordInput").select();
         document.execCommand("copy");
-        alert("Copied the text");
+        alert("Text has been copied.")
 
     });
 }

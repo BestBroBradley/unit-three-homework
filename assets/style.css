@@ -58,15 +58,27 @@ button {
         text-decoration: none;
         display: inline-block;
         font-size: 20px;
-    }
+}
 
 @media (max-width: 714px ) {
+
+    #flavorText {
+        display: none;
+    }
+
     .password-box {
         height: 30%;
+        width: 85%;
 
     }
     
+    textarea {
+        font-size: 16px;
+        padding: 0;
+    }
+
     .wrapper {
         height: 550px;
+        width: 95%;
         }
     }
