@@ -30,6 +30,9 @@ textarea {
 }
 
 #passwordInput {
+    border: none;
+    color: darkslategray;
+    text-align: center;
     padding-top: 3%;
     width: 85%;
     word-wrap: break-word;

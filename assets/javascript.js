@@ -14,11 +14,11 @@ function createPassword() {
             var includeUpper = true;
         }
 
-        console.log(pwLength);
-        console.log(includeSpecial);
-        console.log(includeNum);
-        console.log(includeLower);
-        console.log(includeUpper);
+        // console.log(pwLength);
+        // console.log(includeSpecial);
+        // console.log(includeNum);
+        // console.log(includeLower);
+        // console.log(includeUpper);
 
         var special = ["!", "@", "#", "$", "%", "&", "*", "+", "="]
         var num = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -53,5 +53,11 @@ function createPassword() {
 
     } else alert("You must enter a number between 8 and 128.`")
 
-}
+    copyToClip.addEventListener("click", function () {
+        console.log(document.getElementById("passwordInput").value)
+        var copyText = document.getElementById("passwordInput").select();
+        document.execCommand("copy");
+        alert("Copied the text");
 
+    });
+}

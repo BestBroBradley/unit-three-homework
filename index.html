@@ -20,12 +20,12 @@
         <p>Welcome to the password generator!  Just answer a few questions, and *poof*...just like magic!</p>
 
         <div class="password-box">
-            <p input type="text" id="passwordInput"></p>
+            <textarea readonly id="passwordInput" rows = "5" cols = "80"></textarea>
         </div>
 
         <button type="button" onclick=createPassword() value="Click" id="gen-pw">Generate Password</button>
     
-        <!-- <button type="button" onclick=copyToClip() value="Click">Copy to Clipboard</button> -->
+        <button type="button" id=copyToClip>Copy to Clipboard</button>
 
     </div>
 
